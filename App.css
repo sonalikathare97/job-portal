@@ -1,0 +1,1687 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  height: 76px;
+  padding: 0 7%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.05);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: -0.5px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #2563eb;
+}
+
+/* Profile menu */
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-button {
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 9px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.profile-button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 170px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  padding: 8px;
+  z-index: 1000;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+  display: block;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  text-align: left;
+  color: #334155;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* =========================
+   PROFILE DROPDOWN
+========================= */
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 9px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.profile-button:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #2563eb;
+}
+
+/* Dropdown box */
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 190px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+  z-index: 1000;
+}
+
+/* Small arrow */
+
+.profile-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 24px;
+  width: 11px;
+  height: 11px;
+  background: #ffffff;
+  border-left: 1px solid #e2e8f0;
+  border-top: 1px solid #e2e8f0;
+  transform: rotate(45deg);
+}
+
+/* Dropdown links and buttons */
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.profile-dropdown a:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.profile-dropdown button:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+/* =========================
+   HOME / SEARCH SECTION
+========================= */
+
+.search-section {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 95px 6%;
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 55%, #f8fafc 100%);
+}
+
+.search-section h1 {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #0f172a;
+}
+
+.search-section p {
+  max-width: 700px;
+  margin: 0 auto 38px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+  display: flex;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 18px;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.search-box input::placeholder {
+  color: #94a3b8;
+}
+
+.search-box input:focus {
+  background: #f8fafc;
+}
+
+.search-box button {
+  padding: 15px 28px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   JOBS SECTION
+========================= */
+
+.jobs-section {
+  padding: 60px 7%;
+  background: #f7f9fc;
+  text-align: center;
+}
+
+.jobs-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.jobs-section > p {
+  color: #6b7280;
+  margin-bottom: 35px;
+  font-size: 16px;
+}
+
+/* =========================
+   JOB CARDS CONTAINER
+========================= */
+
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   JOB CARD
+========================= */
+
+.job-card {
+  min-height: 390px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Job title */
+
+.job-card h3 {
+  font-size: 21px;
+  color: #1d4ed8;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  min-height: 59px;
+}
+
+/* Job information */
+
+.job-card p {
+  margin: 0 0 14px 0;
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.job-card p strong {
+  color: #111827;
+  font-weight: 600;
+  min-width:75px ;
+}
+
+.job-card p:last-of-type{
+  margin-bottom: 0;
+}
+
+/* =========================
+   JOB BUTTONS
+========================= */
+
+.job-card button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* Apply button */
+
+.apply-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: white;
+  margin-top: auto;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.apply-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* View Details */
+
+.details-button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px 16px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  background: #eef4ff;
+  color: #2563eb;
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.details-button:hover {
+  background: #eef4ff;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+/* Save Job */
+
+.save-button {
+  width: 100%;
+  background: transparent;
+  color: #6b7280;
+
+  padding: 10px 0 2px 0;
+
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  border-radius: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 8px;
+
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.save-button:hover {
+  color: #dc2626;
+}
+
+/* ApplyForm */
+
+.apply-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  }
+  
+  .apply-form {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .apply-form h2 {
+  margin-bottom: 12px;
+  color:#2563eb;
+  }
+  
+  .apply-form h3 {
+  margin-bottom: 6px;
+  }
+  
+  .apply-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  }
+  
+  .apply-form input,
+  .apply-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  }
+  
+  .close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  }
+  
+  .submit-application {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  }
+  
+  .submit-application:hover {
+  background: #1d4ed8;
+  }
+  
+
+  /* =========================
+   APPLICATIONS PAGE
+========================= */
+
+.applications-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px 60px;
+}
+
+
+/* =========================
+   APPLICATIONS HEADER
+========================= */
+
+.applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 25px 30px;
+  margin-bottom: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Header title */
+
+.applications-header h2 {
+  margin: 0 0 6px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  color: #1f2937;
+}
+
+
+/* Header description */
+
+.applications-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   APPLICATION COUNT
+========================= */
+
+.applications-count {
+  min-width: 130px;
+
+  padding: 15px 20px;
+
+  background: #eef4ff;
+
+  border: 1px solid #dbeafe;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.applications-count span {
+  display: block;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #2563eb;
+}
+
+.applications-count small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #4b5563;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   APPLICATION CARDS
+========================= */
+
+.applications-container {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  margin-top: 25px;
+}
+
+
+/* Individual card */
+
+.application-card {
+  padding: 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 14px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  overflow-wrap: anywhere;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Card hover */
+
+.application-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   APPLICATION JOB TITLE
+========================= */
+
+.application-card h3 {
+  margin: 0 0 18px;
+
+  padding-bottom: 14px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: #1d4ed8;
+}
+
+
+/* =========================
+   APPLICATION INFORMATION
+========================= */
+
+.application-card p {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 6px;
+
+  margin: 11px 0;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* Labels */
+
+.application-card p strong {
+  flex-shrink: 0;
+
+  min-width: 85px;
+
+  color: #111827;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   DELETE APPLICATION
+========================= */
+
+.delete-application {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 10px 16px;
+
+  background: #ffffff;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.delete-application:hover {
+  background: #dc2626;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   CLEAR ALL APPLICATIONS
+========================= */
+
+.clear-applications {
+  display: block;
+
+  margin: 30px auto 0;
+
+  padding: 12px 22px;
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.clear-applications:hover {
+  background: #b91c1c;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   NO APPLICATIONS
+========================= */
+
+.no-applications {
+  max-width: 650px;
+
+  margin: 50px auto;
+
+  padding: 45px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Empty state icon */
+
+.no-applications-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #eef4ff;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+
+/* Empty state heading */
+
+.no-applications h3 {
+  margin: 0 0 10px;
+
+  font-size: 22px;
+
+  color: #1f2937;
+}
+
+
+/* Empty state text */
+
+.no-applications p {
+  max-width: 450px;
+
+  margin: 0 auto 25px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* Browse Jobs */
+
+.browse-jobs-button {
+  padding: 11px 22px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.browse-jobs-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+  
+/* =========================
+   JOB DETAILS PAGE
+========================= */
+
+.job-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 30px 60px;
+}
+
+/* =========================
+   JOB HEADER
+========================= */
+
+.job-header {
+  max-width: 1000px;
+  margin: 20px auto 30px;
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  text-align: center;
+}
+
+/* Job title */
+
+.job-header .job-title {
+  margin: 0 0 10px;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  color: #1d4ed8;
+
+  line-height: 1.3;
+}
+
+/* Company */
+
+.job-header h3 {
+  margin: 0 0 22px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+/* Job information */
+
+.job-header p {
+  display: inline-block;
+
+  margin: 5px;
+
+  padding: 9px 14px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  color: #4b5563;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.job-header p strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+
+/* =========================
+   JOB DETAIL SECTIONS
+========================= */
+
+.job-description,
+.job-responsibilities,
+.job-skills,
+.job-qualifications,
+.job-benefits {
+  max-width: 1000px;
+
+  margin: 20px auto;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8ef;
+
+  border-radius: 12px;
+
+  text-align: left;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+/* Section hover */
+
+.job-description:hover,
+.job-responsibilities:hover,
+.job-skills:hover,
+.job-qualifications:hover,
+.job-benefits:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.job-description h2,
+.job-responsibilities h2,
+.job-skills h2,
+.job-qualifications h2,
+.job-benefits h2 {
+  margin: 0 0 16px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  color: #1f2937;
+}
+
+
+/* =========================
+   JOB DESCRIPTION
+========================= */
+
+.job-description p {
+  margin: 0;
+
+  color: #4b5563;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   JOB LISTS
+========================= */
+
+.job-responsibilities ul,
+.job-skills ul,
+.job-qualifications ul,
+.job-benefits ul {
+  margin: 0;
+
+  padding-left: 25px;
+}
+
+.job-responsibilities li,
+.job-skills li,
+.job-qualifications li,
+.job-benefits li {
+  margin-bottom: 10px;
+
+  color: #4b5563;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.job-responsibilities li:last-child,
+.job-skills li:last-child,
+.job-qualifications li:last-child,
+.job-benefits li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   APPLY NOW
+========================= */
+
+.job-details > .apply-button {
+  display: block;
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 30px auto 12px;
+
+  padding: 14px 20px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.3s ease,
+              transform 0.2s ease;
+}
+
+.job-details > .apply-button:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   BACK TO HOME
+========================= */
+
+.back-button {
+  display: block;
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto 30px;
+
+  padding: 12px 20px;
+
+  background: #f3f4f6;
+
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease,
+              transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   JOB DETAILS NOT FOUND
+========================= */
+
+.job-details > h2 {
+  text-align: center;
+
+  margin-top: 50px;
+
+  color: #1f2937;
+}
+
+/* ===== SAVED JOBS PAGE ===== */
+
+.saved-jobs-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px 40px;
+}
+
+.saved-jobs-page h2 {
+  margin: 0 0 10px;
+  color: #1e293b;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.saved-jobs-subtitle {
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.saved-jobs-count {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 9px 16px;
+  color: #1d4ed8;
+  background: #dbeafe;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.saved-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.saved-job-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.saved-job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.saved-job-info h3 {
+  margin: 0 0 16px;
+  color: #1e293b;
+  font-size: 19px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.saved-job-info p {
+  margin: 10px 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.saved-job-info strong {
+  color: #334155;
+}
+
+.saved-job-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.saved-job-actions button {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-job-btn {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.remove-job-btn:hover {
+  background: #fee2e2;
+}
+
+.saved-jobs-empty {
+  padding: 42px 20px;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+.saved-jobs-empty h3 {
+  margin: 0 0 10px;
+  color: #334155;
+  font-size: 20px;
+}
+
+.saved-jobs-empty p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.clear-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  align-items: center;
+}
+
+.clear-all-button {
+  padding: 12px 20px;
+  align-items: center;
+  color: #fff;
+  background: #dc2626;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clear-all-button:hover {
+  background: #b91c1c;
+}
+
+
+/*========================
+  PROFILE PAGE
+  =======================*/
+
+  .profile-page{
+    min-height: calc(100vh -70px);
+    display: flex ;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background: #f5f7fa;
+  }
+
+  .profile-card{
+    width: 100%;
+    max-width: 650px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .profile-avatar{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .profile-card h2{
+    text-align: center;
+    margin: 5px 0;
+    font-size: 26px;
+    color: #1f2937;
+  }
+
+  .profile-role{
+    text-align: center;
+    margin: 0 0 30px;
+    color: #6b7280;
+    font-size: 15px;
+  }
+
+  .profile-field{
+    margin-bottom: 18px;
+  }
+
+  .profile-field label{
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color:#374151;
+  }
+
+
+/* Inputs */
+
+.profile-field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1e293b;
+  background: #fff;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+/* Input Focus  */
+
+.profile-field input:focus{
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+/* Disabled/Read-only input */
+
+.profile-field input:disabled{
+  background: #f8fafc;
+  color: #475569;
+  cursor: not-allowed;
+  border-color: #e2e8f0;
+}
+
+/* Button Area */
+
+.profile-actions{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/*Profile button */
+
+.profile-actions button{
+  min-width: 180px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 8px;
+  background: fixed#2563eb;
+  color:white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/*Button Hover */
+
+.profile-actions button:hover{
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37,99,235,0.25);
+}
+
+/* Button click */
+
+.profile-actions button:active{
+  transform: translateY(0);
+}
+
+/* =========================
+   REGISTER / LOGIN PAGE
+========================= */
+
+.auth-container {
+  min-height: calc(100vh - 70px);
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Auth Form */
+
+.auth-form {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+
+.auth-form h2 {
+  text-align: center;
+  margin: 0 0 30px;
+  color: #1e293b;
+  font-size: 28px;
+}
+
+/* Labels */
+
+.auth-form label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Normal Inputs */
+
+.auth-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  font-size: 15px;
+  color: #1e293b;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+/* Input Focus */
+
+.auth-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================
+   PASSWORD FIELD
+========================= */
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+/* Password Input */
+
+.password-field input {
+  padding-right: 50px;
+}
+
+/* Remove extra bottom margin
+   because wrapper controls spacing */
+
+.password-field input {
+  margin-bottom: 18px;
+}
+
+/* Show / Hide Password Button */
+
+.password-toggle {
+  position: absolute !important;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) !important;
+
+  width: 40px !important;
+  height: 40px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background: transparent !important;
+  color: #64748b !important;
+
+  font-size: 18px !important;
+  cursor: pointer;
+
+  box-shadow: none !important;
+}
+
+/* Eye Hover */
+
+.password-toggle:hover {
+  background: #f1f5f9 !important;
+  color: #2563eb !important;
+  transform: translateY(-50%) !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   REGISTER / LOGIN BUTTON
+========================= */
+
+.auth-form > button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: white;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* Button Hover */
+
+.auth-form > button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* Button Click */
+
+.auth-form > button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   BOTTOM TEXT
+========================= */
+
+.auth-form p {
+  text-align: center;
+  margin: 22px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Login / Register Link */
+
+.auth-form p a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-form p a:hover {
+  text-decoration: underline;
+}
+
+
